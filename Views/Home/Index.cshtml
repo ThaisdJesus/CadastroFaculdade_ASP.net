@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Aluno
+
+<form asp-controller="Home" asp-action="Salvar" method="post"> 
+
+    Nome:  <input asp-for="Nome" type=text> <br>
+    Curso: <input asp-for="Curso" type=text> <br><br>
+
+
+    <input type="submit" value="Salvar" />
+
+
+</form>
+<p style="margin-top 20px; color:green">
+@TempData["mensagem"]
+</p>
